@@ -1,3 +1,5 @@
 const Reader = require("./lib/utils/Reader");
 const estudiantes = Reader.readJSONfile("estudiantes.json");
-console.log(estudiantes);
+const StudentService = require("./lib/services/StudentService");
+//console.log(estudiantes);
+console.log(StudentService.FilterEmailByCertification(estudiantes, true));
