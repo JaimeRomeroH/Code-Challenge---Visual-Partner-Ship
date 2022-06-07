@@ -10,4 +10,13 @@ describe("Unit Tests for StudentService Class", () => {
         const email = StudentService.FilterEmailByCertification(students, true);
         expect(email).toStrictEqual(StudentService.FilterEmailByCertification(students, true));
     });
+
+    test("Test 2: Unit Tests for StudentService Class", () => {
+     
+        const file = "estudiantes.json";
+      
+        const students = Reader.readJSONfile(file); 
+        const sudentsByCredits = StudentService.FilterStudentsByCredits(students, 500);
+        expect(sudentsByCredits).toStrictEqual(StudentService.FilterStudentsByCredits(students, 500));
+    });
 });
