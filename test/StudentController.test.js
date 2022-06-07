@@ -11,4 +11,13 @@ describe("Unit Tests for StudentController Class", () => {
         const email = StudentController.getEmailByCertification(true)
         expect(email).toStrictEqual(StudentService.FilterEmailByCertification(students, true));
     });
+
+    test("Test 2: Unit Tests for StudentController Class", () => {
+     
+        const file = "estudiantes.json";
+      
+        const students = Reader.readJSONfile(file); 
+        const estudiantes = StudentController.getStudentsByCredits(500)
+        expect(estudiantes).toStrictEqual(StudentService.FilterStudentsByCredits(students, 500));
+    });
 });
