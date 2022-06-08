@@ -7,4 +7,5 @@ const StudentController = require("./lib/controllers/StudentController");
 //console.log(StudentController.getEmailByCertification(true));
 //console.log(StudentService.FilterStudentsByCredits(estudiantes, 500));
 //console.log(StudentController.getStudentsByCredits(500));
-console.log(StudentService.allStudents(estudiantes));
+//console.log(StudentService.allStudents(estudiantes));
+//console.log(StudentController.getAllStudents());
