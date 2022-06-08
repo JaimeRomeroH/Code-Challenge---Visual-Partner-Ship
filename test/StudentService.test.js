@@ -19,4 +19,13 @@ describe("Unit Tests for StudentService Class", () => {
         const sudentsByCredits = StudentService.FilterStudentsByCredits(students, 500);
         expect(sudentsByCredits).toStrictEqual(StudentService.FilterStudentsByCredits(students, 500));
     });
+
+    test("Test 3: Unit Tests for StudentService Class", () => {
+     
+        const file = "estudiantes.json";
+      
+        const students = Reader.readJSONfile(file); 
+        const studentsList = StudentService.allStudents(students);
+        expect(studentsList).toStrictEqual(students);
+    });
 });
