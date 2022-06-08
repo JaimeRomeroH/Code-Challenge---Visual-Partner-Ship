@@ -20,4 +20,13 @@ describe("Unit Tests for StudentController Class", () => {
         const estudiantes = StudentController.getStudentsByCredits(500)
         expect(estudiantes).toStrictEqual(StudentService.FilterStudentsByCredits(students, 500));
     });
+
+    test("Test 3: Unit Tests for StudentController Class", () => {
+     
+        const file = "estudiantes.json";
+      
+        const students = Reader.readJSONfile(file); 
+        const estudiantes = StudentController.getAllStudents()
+        expect(estudiantes).toStrictEqual(students);
+    });
 });
